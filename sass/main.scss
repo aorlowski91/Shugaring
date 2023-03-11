@@ -25,19 +25,17 @@ body {
 
 .header {
     height: 100vh;
-    position: relative;
-    overflow: hidden;
+    //position: relative;
     background-image: url(/img/background.jpg);
     background-size: cover;
-    background-position: center;
 
     .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 30px 10%;
         //background-color: $light-pink; //- można dodać jakieś przyciemnienie
         background-color: rgba(0, 0, 0, .25);
-        padding: 30px 10%;
 
         &__link {
             position: relative;
@@ -301,6 +299,10 @@ body {
         border-radius: 50px;
     }
 
+    .contact__input::placeholder {
+        opacity: 0.4;
+    }
+
     .contact__button {
         margin: 1.5em;
         background-color: $dark_pink;
@@ -322,9 +324,13 @@ body {
     &__box {
         position: relative;
         margin: 0 5%;
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: center;
+
+        &-item {
+            margin: 0;
+        }
 
         .slick-next, .slick-prev {
             opacity: 0;
@@ -333,19 +339,115 @@ body {
             border: none;
         }
 
-        .slick-next {
+        /*.slick-next {
             top: 0;
-            right: 2%;
+            right: 11%;
             height: 100%;
-            width: 150px;
-        }
+            width: 120px;
 
-        .slick-prev {
+            img {
+                z-index: 6;
+                height: 100%;
+                width: 100%;
+            }
+        }*/
+
+        /*.slick-prev {
             top: 0;
             left: -2%;
             height: 100%;
             width: 150px;
             z-index: 5;
+        }*/
+    }
+}
+
+.reviews {
+
+    &__title {
+        font-size: 80px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__box {
+        margin: 1.8em;
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 4;
+        //border: 1px solid black;
+
+        &-item {
+            display: grid;
+            grid-template-columns: 3;
+            grid-template-rows: 3;
+            margin: 20px;
+            padding: 25px 40px;
+            width: auto;
+            border: 3px solid $dark_pink;
+            border-radius: 50px;
+            color: $dark_pink;
+            transition: transform .3s ease, box-shadow .3s ease;
+
+            h2 {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                font-weight: 700;
+            }
+
+            p {
+                grid-column: 1/3;
+                grid-row: 2/3;
+                margin: 10px;
+                font-weight: 500;
+            }
+
+            .item-img {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                justify-self: end;
+
+                img {
+                    height: 1.4rem;
+                }
+            }
+
+            h2, p {
+                font-size: 24px;
+                line-height: 30px;
+            }
+        }
+
+        &-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.3);
+            -webkit-box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.3);
+            -moz-box-shadow: 0px 7px 12px 0px rgba(0,0,0,0.3);
+        }
+
+        &-item--one {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        &-item--two {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &-item--three {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        &-item--four {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        &-item--five {
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        &-item--six {
+            grid-column: 2/3;
+            grid-row: 3/4;
         }
     }
 }

@@ -278,9 +278,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $yellow;
+    background-color: $light_yellow;
 
-    .contact__title {
+    .contact__form-title {
         padding: 40px;
         font-size: 80px;
         font-weight: 600;
@@ -449,6 +449,89 @@ body {
             grid-column: 2/3;
             grid-row: 3/4;
         }
+    }
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 2.5em;
+    background-color: $light_yellow;
+
+    &__title {
+        grid-column: 1/2;
+        font-size: 80px;
+        font-weight: 600;
+    }
+
+    &__map {
+        grid-column: 2/3;
+
+        &-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .map-img {
+                margin: auto;
+                width: 550px;
+                height: 550px;
+                object-fit: cover;
+                border: 3px solid $dark_pink;
+                border-radius: 50%;
+            }
+
+            .map-text {
+                position: absolute;
+                bottom: 0%;
+                padding: 30px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 30px;
+                width: 350px;
+                color: $white;
+                text-align: center;
+                background-color: $dark_pink;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 50px;
+    color: $white;
+    background-image: url(/img/background2.jpg);
+    background-size: cover;
+    object-fit: fill;
+
+    &__title {
+        font-size: 90px;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+
+    &__text {
+        font-size: 56px;
+        line-height: 70px;
+        margin-bottom: 1.7em;
+    }
+
+    .address {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+        margin: 40px 0;
+    }
+
+    &__bottom-text {
+        margin-top: 70px;
+        font-size: 24px;
+        text-align: center;
     }
 }
 

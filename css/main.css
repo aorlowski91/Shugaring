@@ -290,9 +290,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #EBA937;
+  background-color: #F4C675;
 }
-.contact__form .contact__title {
+.contact__form .contact__form-title {
   padding: 40px;
   font-size: 80px;
   font-weight: 600;
@@ -458,4 +458,91 @@ body {
 .reviews__box-item--six {
   grid-column: 2/3;
   grid-row: 3/4;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.5em;
+  background-color: #F4C675;
+}
+.contact__title {
+  grid-column: 1/2;
+  font-size: 80px;
+  font-weight: 600;
+}
+.contact__map {
+  grid-column: 2/3;
+}
+.contact__map-card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contact__map-card .map-img {
+  margin: auto;
+  width: 550px;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #EB3779;
+  border-radius: 50%;
+}
+.contact__map-card .map-text {
+  position: absolute;
+  bottom: 0%;
+  padding: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  width: 350px;
+  color: #FEFCFC;
+  text-align: center;
+  background-color: #EB3779;
+  border-radius: 50px;
+}
+
+.footer {
+  padding: 50px;
+  color: #FEFCFC;
+  background-image: url(/img/background2.jpg);
+  background-size: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.footer__title {
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.footer__text {
+  font-size: 56px;
+  line-height: 70px;
+  margin-bottom: 1.7em;
+}
+.footer .address {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+  margin: 40px 0;
+}
+.footer__bottom-text {
+  margin-top: 70px;
+  font-size: 24px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
